@@ -1,0 +1,135 @@
+/* Editor styles for comfortable blog post writing */
+
+/* Main editor container */
+.editor-content {
+    min-height: 400px;
+    height: auto;
+    max-height: 70vh;
+    padding: 15px;
+    overflow-y: auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    border-color: #ced4da;
+    transition: all 0.3s ease;
+}
+
+/* Editor in fullscreen mode */
+.fullscreen-editor .editor-content {
+    min-height: 80vh;
+    max-height: 80vh;
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Editor focus state */
+.editor-content:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+/* Heading styles within editor */
+.editor-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.editor-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.editor-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+/* List styles within editor */
+.editor-content ul, 
+.editor-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.editor-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Link styles within editor */
+.editor-content a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* Image styles within editor */
+.editor-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+/* Toolbar styling */
+.editor-toolbar {
+    padding: 8px;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.editor-toolbar .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Animation for toolbar buttons */
+.editor-toolbar .btn:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+/* Placeholder text styling */
+.editor-content[data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Full-width editor in fullscreen mode */
+.fullscreen-mode .col-lg-12 {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .editor-content {
+        background-color: #212529;
+        color: #f8f9fa;
+        border-color: #495057;
+    }
+    
+    .editor-toolbar {
+        background: #343a40;
+        border-color: #495057;
+    }
+    
+    .editor-toolbar .btn {
+        color: #f8f9fa;
+        border-color: #6c757d;
+    }
+    
+    .editor-content h1, 
+    .editor-content h2, 
+    .editor-content h3 {
+        color: #f8f9fa;
+    }
+}
